@@ -1,0 +1,66 @@
+=====DAY04============
+
+What do you remember from the last class
+Locators : Use to find eements from the website
+	Id, name, className, tagName, linkText, partialLinkText, xpath, cssSelector
+
+--In which order, do you use locators ?
+	I use id first, cause there should have UNIQUE id. If thete is no id. then i use name-if is a unique name. class='btn-btnprimary' i usually don't use class because they are usually not UNIQUE. I don't use tags there are not generally unique. If the element is a link, then i prefer to use linkText or partialLinkText. Actually there is xpath i also prefer to use for lacations elements. I am good at writing dynamic xpath for the elements. I can write xpath for any element on the page.Even though xpath a little slower, it is safer to use,
+
+indElement(By.Locator('value')) --> returns single element.(When multiple match, returns the first element). Returns WebElement, If there ius no match then throws nosuchelemetexception
+findElements(By.Locator('value'))--> returns multuple elements. Return type is
+List<WebElement>, if there is no match, returns empty List. Doesn't throw exception.
+xpath : There are 2 xpath. absolute and relative
+Absolute xpath : Navigation from the first parent to the targeted element 1 by 1. / is used.
+Relative xpath : Navigating the elements using relative path. No need to go from parent to child 1 by 1. // is used
+//tag[@attribute = 'value of that attribute']
+There are multiple ways to write xpath.
+Example website is : https://qa-environment.resortsline.com/
+xpath using index.
+
+
+---------------------------------------
+//tagname[.='text name']
+//h2[.='Welcome To Our Hotel']
+This is used to locate the texts with SPECIFIC tag this combnation can be used to lacete the text on the page We have to pass complete text inside ' '
+---------------------------------------
+//*[.='text name']
+//*[.='Welcome To Our Hotel']
+* = ANY
+This is used to locate the texts with ANY tag this combnation can be used to lacete the text on the page We have to pass complete text inside ' '  This is used to locate a text on the page with ANY TAG OR ATTRIBUTE
+* -->> for any tag
+. -->> for any attribute
+--------------------------------------
+-->>Just memorise this one //tag[@attribute = 'value']
+-------------------------------------------
+//*[(text()='text name’)]
+//a[.='Resortsline']
+* = ANY
+This is used to locate the texts with ANY tag this combnation can be used to lacete the text on the page We have to pass complete text inside ' '  This is used to locate a text on the page with ANY TAG OR ATTRIBUTE
+---------------------------------------
+//*[contains(text(),'piece of text’)];
+//*[contains(text(),'Welcome To Our H')]
+* = ANY
+This is used to locate the texts with ANY tag this combnation can be used to lacete the text on the page We CAN pass complete or PARTIAL text inside ' '  This is used to locate a text on the page with ANY TAG OR ATTRIBUTE
+https://qa-environment.resortsline.com/Account/Logon
+---------------------------------------
+//tag[contains(@attribute,'value')]
+//input[contains(@id,'UserName')]
+This is used to locate especially DYNAMIC ELEMENTS We use TAG, ATTRIBUTE, VALUE OF THAT ATTRIBUTE We can use the xpath to locate any element
+What is the dynamic element ?
+The element's id, class.. can change when the page refreses.Especially if there is number in the attribute value, then the number can change. This is less likely but can hapen
+facebook.com --> create new account
+
+---------------------------------------
+
+--How can you handle dynamic element?
+
+//tag[starts-with(@attribute,'value')] -->(//input[starts-with(@id,'u_')])[1] returns the first input whose id starts with u_
+//tag[ends-with(@attribute,'value')] --> //input[ends-with(@id,'P7')] returns the elements who ends with P7
+//tag[contains(@attribute,'value')] --> //(input[contains(@id,'u_')])[1]
+//*[starts-with(@attribute,'value')] -->(//*[starts-with(@id,'u_')])[1] returns any tag whose id starts with u_
+//*[contains(@attribute,'value')] -->//*[contains(@id,'u_')] returns ANY tag whose ID CONTAINS u_ THIS IS THE MOST GENERIC
+XPATH FOR LOCATING DYNAMIC ELEMENTS
+Note that Dynamic elements are not common. We can rarely see dynamic elements on the pages.
+
+----------------------------------------------

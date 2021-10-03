@@ -49,5 +49,7 @@ public class Day02_FirstJUnitClass {
         //3. Assert.assertEquals("excepted","actual")
         Assert.assertEquals("java", "java"); //pass
         Assert.assertEquals("java", "javascript"); //fail
+
+
     }
 }
