@@ -24,7 +24,7 @@ public class Day04_GoogleSearch {
         //This means, if driver needs 1 seconds wait, then wait will be only 1 seconds
         //implicit wait is dynamic wait. It is enough to use only once in the class.
         /*Why wait is needed?
-            page is slow due t lots of image, video, iframe,...
+            page is slow due to lots of image, video, iframe,...
             internet is slow,
             database is slow,
             local computer is slow,
@@ -50,6 +50,7 @@ public class Day04_GoogleSearch {
 
     @After
     public void tearDown(){
+
         driver.close();
     }
 
