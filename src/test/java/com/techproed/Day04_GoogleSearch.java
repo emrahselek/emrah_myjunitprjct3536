@@ -22,6 +22,7 @@ public class Day04_GoogleSearch {
         //ADDING IMPLICIT WAIT
         //WAIT UP TO 30 second WHEN NEED
         //This means, if driver needs 1 seconds wait, then wait will be only 1 seconds
+        //implicit wait is dynamic wait. It is enough to use only once in the class.
         /*Why wait is needed?
             page is slow due t lots of image, video, iframe,...
             internet is slow,
