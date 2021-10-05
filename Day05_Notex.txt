@@ -1,7 +1,6 @@
 
 ======Day05======
 
-
 //IMPLICIT WAIT:
 Implicit wait means WAIT UP TO 30 second WHEN NEEDED.
 This means, if driver needs 1 seconds wait, then wait will be only 1 seconds.
@@ -13,17 +12,28 @@ Implicit wait is dynamic wait. It is enough to use only once in the class.
     -database is slow,
     -local computer is slow,
 
+------------------------------------------
 
-
+*****CheckBox
+- isSelected() --->>>check if a box is checked.return true if box is checked. returns false if box is unchecked
+- click() is used to check/uncheck checkboxes.
+-------------------------------------------------------------
+*****Radio Button
+- isSelected() --->>>check if a box is checked.return true if box is checked. returns false if bo
+-click() is used to check/uncheck radio buttons
+-------------------------------------------------------------
+*****DropDown
 *****Steps for interaction with dropdown elements
-Step 1: Locate the select element dropdown using any locator. Example:
+-Step 1: Locate the select element dropdown using any locator. Example:
  WebElement selectElement=driver.findElement(By.id(“value of id"));
-Step 2: Create Select object and pass the selectElement to that object.Example:
+-Step 2: Create Select object and pass the selectElement to that object.
+Example:
  Select options=new Select(selectElement);
-Step 3: We now can handle dropdown using any method. Example:
-options.selectByIndex(1);
-options.selectByValue(“1”);
-options.selectByVisibleText(“Watch”);
+-Step 3: We now can handle dropdown using any method. Example:
+options.selectByIndex(1); Index starts from 0.This takes an integer as parameter
+options.selectByValue(“1”); Pass the value of the option. This takes a string as parameter
+options.selectByVisibleText(“Watch”); Pass the Text of the option. This takes a string as parameter
+
 *****There are 3 ways to select from a dropdown
  select.selectByIndex(1);
  select.selectByValue("2");
@@ -34,6 +44,8 @@ options.selectByVisibleText(“Watch”);
 
 *****getFirstSelectedOption(); returns the first selected option from a dropdown
  WebElement firstSelectedOption = select.getFirstSelectedOption();
+
+
 
 
 

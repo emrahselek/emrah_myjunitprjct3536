@@ -34,14 +34,15 @@ public class Day05_Checkbox {
         }
         @Test
         public void checkbox(){
-//        Go to https://the-internet.herokuapp.com/checkboxes 
-//        Locate the elements of checkboxes 
+//        Go to https://the-internet.herokuapp.com/checkboxes
+//        Locate the elements of checkboxes
             driver.get("https://the-internet.herokuapp.com/checkboxes");
             WebElement checkbox1= driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
             WebElement checkbox2= driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
             //        Then click on checkbox1 if box is NOT selected
             // isSelected() is used to check if checkbox or radio button is checked or unchecked
             // returns true if checkbox is already selected. Returns false if it is not selected
+
             if(!checkbox1.isSelected()){
                 checkbox1.click();
             }
@@ -60,6 +61,5 @@ public class Day05_Checkbox {
 
         driver.close();
     }
-
 
 }

@@ -7,13 +7,14 @@ public class Day05_JavaFaker {
     //We may need fake data for testing
     //JavaFaker is used to get fake data
     //We need java faker dependency in our pom.xml
+    //https://fakercloud.com/api
     @Test
     public void fakerTest(){
 
         //1. Create Faker object
         Faker faker = new Faker();
 
-        //2. Now i can generate fake data: firstname, lastname, addresss, city, state, title,...
+        //2. Now I can generate fake data: firstname, lastname, addresss, city, state, title,...
 
         //generation fake firstname
         String fName = faker.name().firstName();

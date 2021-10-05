@@ -1,0 +1,12 @@
+
+====Day06===
+
+*****Alerts:
+-accept()->Same as clicking OK of an alert.
+driver.switchTo().alert().accept();
+-dismiss()->Same as clicking Cancel of an alert.
+driver.switchTo().alert().dismiss();
+-getText()-> To get the alert message of the alert.
+driver.switchTo().alert().getText();
+-sendKeys(“Text”)->To send a text into alert textbox
+driver.switchTo().alert().sendKeys(“Text")

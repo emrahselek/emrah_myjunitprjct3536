@@ -36,6 +36,7 @@ public class Day05_DropDown {
         select.selectByIndex(1);
 //        Thread.sleep(5000);
     }
+
     @Test
     public void selectByValueTest() throws InterruptedException {
         //2.Create method selectByValueTest Select Option 2 by value
@@ -44,6 +45,7 @@ public class Day05_DropDown {
         Thread.sleep(5000);
         select.selectByValue("2");
     }
+
     //3.Create method selectByVisibleTextTest Select Option 1 value by visible text
     @Test
     public void selectByVisibleTextTest(){
@@ -63,6 +65,7 @@ public class Day05_DropDown {
             System.out.println(eachOption.getText());
         }
     }
+
     //5.Create method printFirstSelectedOptionTest Print first selected option
     @Test
     public void printFirstSelectedOptionTest(){
@@ -73,6 +76,7 @@ public class Day05_DropDown {
         //Asserting if selected option is Please select an option
         Assert.assertEquals("Please select an option",firstSelectedOption.getText());
     }
+
     //6.Crate methods. sizeTest. Find the size of the dropdown,
     // Print "Expected Is Not Equal Actual" if there are not 4 elements in the dropdown.
     @Test
