@@ -32,7 +32,7 @@ public class Day06_IFrame {
 //        driver.switchTo().frame(0);
         /*
         2. Switching iframe by id/name.
-        This iframe has an id, then i canpass value of id and switch to teh iframe
+        This iframe has an id, then I can pass value of id and switch to teh iframe
          <iframe
          id="mce_0_ifr"
          frameborder="0"
