@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 public class Day07_IframeExample {
+
     //IQ: How do you find the total number of iframe on a page?
     WebDriver driver;
     @Before

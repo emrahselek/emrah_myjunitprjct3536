@@ -40,6 +40,6 @@ public class Day07_Actions2 {
 
     @After
     public void tearDown(){
-        driver.close();
+        //driver.close();
     }
 }

@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class Day05_RadioButton {
     WebDriver driver;
     Faker faker=new Faker();
+
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();

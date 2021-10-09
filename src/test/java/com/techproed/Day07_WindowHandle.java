@@ -37,7 +37,7 @@ public class Day07_WindowHandle {
         String window1Handle = driver.getWindowHandle();
         //2.GET ALL WINDOW HANDLES
         Set<String> allWindowHandles = driver.getWindowHandles();
-        //allWindowHandle has window1 and window2(This is the one i want to switch)
+        //allWindowHandle has window1 and window2(This is the one I want to switch)
         //3. Switch to the window2 using window handles
         for (String eachWindowHandle:allWindowHandles){
             if (!eachWindowHandle.equals(window1Handle)){

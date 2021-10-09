@@ -16,10 +16,11 @@ public class Day06_Alert {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("http://the-internet.herokuapp.com/javascript_alerts");
+
     }
     @Test
     public void acceptAlert(){
+        driver.get("http://the-internet.herokuapp.com/javascript_alerts");
 //        click on the first alert,
         driver.findElement(By.xpath("//button[@onclick='jsAlert()']")).click();
 //        verify the text “I am a JS Alert” ,

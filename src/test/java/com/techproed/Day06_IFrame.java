@@ -32,7 +32,7 @@ public class Day06_IFrame {
 //        driver.switchTo().frame(0);
         /*
         2. Switching iframe by id/name.
-        This iframe has an id, then I can pass value of id and switch to teh iframe
+        This iframe has an id, then I can pass value of id and switch to the iframe
          <iframe
          id="mce_0_ifr"
          frameborder="0"
@@ -41,12 +41,16 @@ public class Day06_IFrame {
          class="tox-edit-area__iframe"></iframe>
           */
 //        driver.switchTo().frame("mce_0_ifr");
+
         /*
          * 3.Switching iframe by WebElement
          * We first locate the iframe element
          * */
         WebElement iframeElement = driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']"));
         driver.switchTo().frame(iframeElement);
+        //OR
+        //driver.switchTo().frame("mce_0_ifr");
+
         //NOTE: //p element is inside the iframe
         WebElement textbox=driver.findElement(By.xpath("//p"));
         //    Delete the text in the text box
@@ -65,6 +69,8 @@ public class Day06_IFrame {
 
     @After
     public void tearDown(){
-        driver.close();
+
+
+   //     driver.close();
     }
 }

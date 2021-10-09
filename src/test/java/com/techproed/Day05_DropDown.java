@@ -22,16 +22,18 @@ public class Day05_DropDown {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://the-internet.herokuapp.com/dropdown");
+
     }
     //1.Create method selectByIndexTest and Select Option 1 using index
     @Test
     public void selectByIndexTest() throws InterruptedException {
+
+        driver.get("https://the-internet.herokuapp.com/dropdown");
         //1. locate the dropdown element
         WebElement dropdown = driver.findElement(By.id("dropdown"));
         //2. use select object
         Select select = new Select(dropdown);
-        //3. use any 3 method to select-index,value, visibletext
+        //3. use any 3 method to select=> index,value, visibletext
         Thread.sleep(5000);
         select.selectByIndex(1);
 //        Thread.sleep(5000);
