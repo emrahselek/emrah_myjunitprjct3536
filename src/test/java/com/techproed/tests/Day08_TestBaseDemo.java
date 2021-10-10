@@ -1,13 +1,13 @@
 package com.techproed.tests;
 
-import com.techproed.Utilities.TestBase;
+import com.techproed.utilities.TestBase;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
 public class Day08_TestBaseDemo extends TestBase {
-    /*Since i have before after methods in TestBase, don't use thme in here
+    /*Since i have before after methods in TestBase, don't use the in here
      * This is a TEST CLASS and will have only @Test method*/
     @Test
     public void test1(){
@@ -24,3 +24,6 @@ public class Day08_TestBaseDemo extends TestBase {
         Assert.assertTrue(driver.getPageSource().contains("porcelain teapot"));
     }
 }
+
+
+

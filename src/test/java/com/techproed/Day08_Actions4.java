@@ -1,27 +1,12 @@
 package com.techproed;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
+import com.techproed.utilities.TestBase;
 import org.junit.Test;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import java.util.concurrent.TimeUnit;
+public class Day08_Actions4 extends TestBase {
 
-
-public class Day08_Actions4 {
-    WebDriver driver;
-
-    @Before
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }
 
     @Test
     public void scrollUpDown() throws InterruptedException {
@@ -29,11 +14,12 @@ public class Day08_Actions4 {
         Actions actions = new Actions(driver);
         /*
          * PAGE_DOWN  => scroll down the page
-         * ARROW_DOWN => scroll down the page
+         * ARROW_DOWN => scroll down the page a little
          *
          * PAGE_UP  => scroll up
-         * ARROW_UP => scroll up
+         * ARROW_UP => scroll up a little
          * */
+
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         actions.sendKeys(Keys.PAGE_DOWN).perform();
 
@@ -49,10 +35,5 @@ public class Day08_Actions4 {
         /*ARROW_UP moves the page up a little bit*/
         actions.sendKeys(Keys.ARROW_UP).perform();
 
-
-    }
-    @After
-    public void tearDown(){
-        driver.close();
     }
 }

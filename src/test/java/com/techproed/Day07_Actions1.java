@@ -36,7 +36,6 @@ public class Day07_Actions1 {
         Assert.assertEquals("You selected a context menu", alert);
 //        Then accept the alert
         driver.switchTo().alert().accept();
-
     }
 
     @After
