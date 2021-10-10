@@ -28,7 +28,5 @@ public class Day08_FileDownloadTest extends TestBase {
         boolean isExist = Files.exists(Paths.get(downloadpath));
         Assert.assertTrue(isExist);
 
-
-
     }
 }
