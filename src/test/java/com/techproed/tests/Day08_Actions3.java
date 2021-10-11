@@ -1,4 +1,4 @@
-package com.techproed;
+package com.techproed.tests;
 
 import com.techproed.utilities.TestBase;
 import org.junit.Test;
